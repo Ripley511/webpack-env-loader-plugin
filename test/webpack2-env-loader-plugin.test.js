@@ -54,7 +54,7 @@ describe("test", () => {
     };
     runWebpack({}, config, function (err) {
       if (err) return done(err);
-      assert.fileContentMatch(OUTPUT_FILE_PATH, /console\.log\(\(\"default\"\)\)/);
+      assert.fileContentMatch(OUTPUT_FILE_PATH, /console\.log\(\"default\"\)/g);
       done();
     });
   });
@@ -68,7 +68,7 @@ describe("test", () => {
     };
     runWebpack({}, config, function (err) {
       if (err) return done(err);
-      assert.fileContentMatch(OUTPUT_FILE_PATH, /console\.log\(\(\"default\"\)\)/);
+      assert.fileContentMatch(OUTPUT_FILE_PATH, /console\.log\(\"default\"\)/g);
       done();
     });
   });
@@ -84,7 +84,7 @@ describe("test", () => {
     };
     runWebpack({}, config, function (err) {
       if (err) return done(err);
-      assert.fileContentMatch(OUTPUT_FILE_PATH, /console\.log\(\(\"bar\"\)\)/);
+      assert.fileContentMatch(OUTPUT_FILE_PATH, /console\.log\(\"bar\"\)/g);
       done();
     });
   });
@@ -100,7 +100,7 @@ describe("test", () => {
     };
     runWebpack({}, config, function (err, stats) {
       if (err) return done(err);
-      assert.fileContentMatch(OUTPUT_FILE_PATH, /console\.log\(\(\"development\"\)\)/);
+      assert.fileContentMatch(OUTPUT_FILE_PATH, /console\.log\(\"development\"\)/g);
       done();
     });
   });
