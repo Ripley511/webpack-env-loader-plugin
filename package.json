@@ -1,7 +1,7 @@
 {
-  "name": "webpack-env-loader-plugin",
-  "version": "0.1.4",
-  "description": "A plugin for loading configuration into webpack based on environment",
+  "name": "webpack2-env-loader-plugin",
+  "version": "0.1.0",
+  "description": "A plugin for loading configuration into webpack 2 based on environment",
   "main": "index.js",
   "scripts": {
     "test": "mocha -R spec ./test",
@@ -10,6 +10,9 @@
     "postversion": "npm publish && git push origin master --tags"
   },
   "author": "@k88hudson",
+  "contributors": [
+    "Pascal Vaccaro <pascal.vaccaro@gmail.com"
+  ],
   "license": "MPL-2.0",
   "devDependencies": {
     "chai": "^3.5.0",
@@ -20,7 +23,7 @@
   "dependencies": {
     "colors": "^1.1.2",
     "strip-json-comments": "^2.0.1",
-    "webpack": "^1.12.14",
+    "webpack": "^2.1.0-beta.28",
     "yaml": "^0.3.0",
     "yamljs": "^0.2.6"
   }
